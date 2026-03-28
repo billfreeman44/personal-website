@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Bill Freeman</title>
+  <meta name="description" content="Get in touch with Bill Freeman" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Bill Freeman home">
+        <span class="brand-mark">BF</span>
+        <span>Bill Freeman</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="index.html">← Back home</a>
+
+    <div class="card page-header">
+      <h1 class="page-title">Contact</h1>
+      <p class="page-subtitle">
+        Come say hello!
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="info-card">
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:billfreeman44@yahoo.com">
+            <div>
+              <span class="contact-label">Email</span>
+              <strong>billfreeman44@yahoo.com</strong>
+            </div>
+            <span>↗</span>
+          </a>
+
+          <a class="contact-link" href="https://www.linkedin.com/in/billfreeman44/" target="_blank" rel="noreferrer noopener">
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <strong>Connect professionally</strong>
+            </div>
+            <span>↗</span>
+          </a>
+
+          <a class="contact-link" href="https://github.com/billfreeman44" target="_blank" rel="noreferrer noopener">
+            <div>
+              <span class="contact-label">GitHub</span>
+              <strong>My public github</strong>
+            </div>
+            <span>↗</span>
+          </a>
+
+          <a class="contact-link" href="https://github.com/pureskillgg" target="_blank" rel="noreferrer noopener">
+            <div>
+              <span class="contact-label">PureSkill.gg GitHub</span>
+              <strong>PureSkill.gg GitHub</strong>
+            </div>
+            <span>↗</span>
+          </a>
+
+          <a class="contact-link" href="https://pureskill.gg" target="_blank" rel="noreferrer noopener">
+            <div>
+              <span class="contact-label">PureSkill.gg Website</span>
+              <strong>Visit pureskill.gg</strong>
+            </div>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <p class="section-copy" style="margin-top:0; color: var(--text);">
+          I use data to help people make better decisions and solve real-world problems.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Bill Freeman</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
