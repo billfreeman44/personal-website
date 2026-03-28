@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cost &amp; Time — Overwatch Loot Box Simulation</title>
+  <meta name="description" content="Part 4: How much money or time does it take to get loot boxes in Overwatch?" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Bill Freeman home">
+        <span class="brand-mark">BF</span>
+        <span>Bill Freeman</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../experience.html">Experience</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="overwatch_loot_boxes.html">← Back to table of contents</a>
+
+    <div class="card page-header">
+      <h1 class="page-title">Money or Time to Get These Loot Boxes</h1>
+      <p class="page-subtitle">Part 4: Converting loot box counts to dollars and hours</p>
+    </div>
+
+    <div class="experience-list">
+      <article class="experience-entry">
+        <p>Converting number of loot boxes to a price in dollars is simple since players can directly buy loot boxes and the prices are listed <a href="https://us.shop.battle.net/en-us/product/overwatch-loot-box" style="color: var(--accent);">here</a>. Converting number of loot boxes to number of hours played in game is a bit more difficult. There are several different ways to earn loot boxes in game.</p>
+
+        <ul>
+          <li>By leveling up</li>
+          <li>By logging in during a special or seasonal event for the first time</li>
+          <li>One Loot Box is earned for the 3rd, 6th, and 9th win by playing Arcade game modes once a week</li>
+          <li>One Loot Box is earned for the first time winning some game modes in the Arcade</li>
+        </ul>
+
+        <p>After reaching level 22, it takes 20,000 XP to advance one level, and each level gives you one loot box. There is a breakdown of how you gain XP on <a href="http://overwatch.wikia.com/wiki/Progression" style="color: var(--accent);">the Overwatch wikia</a>, so I won't break it down here.</p>
+
+        <p>To convert playtime to XP I assume: 20 minutes per match, 15 of those are gametime minutes (accounting for queue, POTG, and breaks), a 50% winrate, no abandons, playing with a group half the time, winning at least one gold in 75% of my matches, never winning bronze or silver medals, competitive only, and 2 hours of gameplay per day. Therefore to convert H hours played to L number of loot boxes I get:</p>
+
+        <p style="text-align: center;">$$((0.75\times 60\times H)211.5+(0.5\times 3\times H)500+(5/2\times H)300+$$</p>
+        <p style="text-align: center;">$$(H/2)1500+(3\times 0.75\times H)150)1.35/20000=L$$</p>
+
+        <p>The first term is the XP per hour earned for playing. The second term is the XP for winning games. The third term is the bonus for consecutive matches (5 consecutive match bonuses every 2 hours). The fourth term is XP bonus for winning at least one game each day. The final term is for medals per game. The factor of 1.35 outside the parenthesis is the XP bonus for playing competitive and playing in a group half of the time. The 20,000 is because it takes 20,000 XP to unlock one loot box. These can be simplified to:</p>
+
+        <p style="text-align: center;">$$(9517.5+750+750+750+337.5)6.75\times 10^{-5} \times H = L$$</p>
+
+        <p>This is actually a rather illuminating equation. By far, the largest source of XP is time in game (the first term). The others are all more than 10x smaller. The XP for medal gain is the smallest factor. The difference in winning gold every game and winning no gold is a measly 2.5%.</p>
+
+        <p>This equation fully simplifies to:</p>
+
+        <p style="text-align: center;">$$0.817\times H = L$$</p>
+
+        <p>This comes out to 1 loot box every hour and 13 minutes.</p>
+      </article>
+
+      <article class="experience-entry">
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Number of loot boxes</th>
+                <th>Cost</th>
+                <th>Playtime</th>
+                <th>Real Time*</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2</td><td>$1.99</td><td>2 hours</td><td>1 day</td></tr>
+              <tr><td>5</td><td>$4.99</td><td>7 hours</td><td>3 days</td></tr>
+              <tr><td>11</td><td>$9.99</td><td>13 hours</td><td>1 week</td></tr>
+              <tr><td>24</td><td>$19.99</td><td>1 day 5 hours</td><td>2 weeks</td></tr>
+              <tr><td>50</td><td>$39.99</td><td>2 days 12 hours</td><td>3 weeks 3 days</td></tr>
+              <tr><td>100</td><td>$79.98</td><td>5 days 1 hour</td><td>2 months</td></tr>
+              <tr><td>500</td><td>$399.90</td><td>25 days 10 hours</td><td>10 months</td></tr>
+              <tr><td>1000</td><td>$799.80</td><td>50 days</td><td>1 year 8 months</td></tr>
+              <tr><td>1500</td><td>$1199.70</td><td>76 days</td><td>2 years 6 months</td></tr>
+              <tr><td>2000</td><td>$1599.60</td><td>101 days</td><td>3 years 4 months</td></tr>
+              <tr><td>2500</td><td>$1999.50</td><td>126 days</td><td>4 years 2 months</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Table 4</strong> — Cost and time taken to get a certain number of loot boxes from only leveling up based on my personal experience. The cost is from the store. The playtime and real time columns are based on my own personal experience and calculations. (* — based on 2 hours of playing per day)</p>
+
+        <p>This is an idealistic estimation based on my personal experience and may be <em>very</em> different for other players. The table also doesn't take into account the 3 loot boxes earned each week for winning 9 arcade matches or the other special situations. It also doesn't count getting from level 0 to 22 which takes <a href="http://overwatch.wikia.com/wiki/Progression" style="color: var(--accent);">much less XP</a>.</p>
+
+        <p>I have created an interactive version of the XP and loot box calculator <a href="lootboxanalysis_page6interactive.html" style="color: var(--accent);">here</a>.</p>
+
+        <p><a href="https://www.forbes.com/sites/insertcoin/2016/06/10/the-math-behind-why-overwatchs-loot-boxes-are-exhausting-to-unlock/#4a6574722adf" style="color: var(--accent);">This post</a> by <a href="https://www.forbes.com/sites/insertcoin/#2099a1bb6041" style="color: var(--accent);">Paul Tassi</a> estimated 51 minutes per loot box, and <a href="https://us.battle.net/forums/en/overwatch/topic/20744614267" style="color: var(--accent);">this post</a> by <a href="https://playoverwatch.com/en-us/career/pc/BigAlChubbs-1659" style="color: var(--accent);">BigAlChubbs</a> estimated between 1 hour 6 minutes and 55 minutes per loot box. Their estimates are less time per loot box because they guessed between 7 and 10 minutes per match and did not include queue time.</p>
+      </article>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 32px;">
+      <a href="lootboxanalysis_page5.html" class="button button-secondary">← Previous: Common Questions</a>
+      <a href="lootboxanalysis_page8.html" class="button button-secondary">Next: New Loot Box System →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Bill Freeman</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
