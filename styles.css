@@ -460,6 +460,14 @@ h1 {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
+.experience-entry a:not(.button) {
+  color: var(--accent);
+}
+
+.experience-entry a:not(.button):hover {
+  text-decoration: underline;
+}
+
 .experience-meta {
   display: flex;
   flex-wrap: wrap;

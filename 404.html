@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Bill Freeman</title>
+  <meta name="description" content="Page not found." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/index.html" aria-label="Bill Freeman home">
+        <span class="brand-mark">BF</span>
+        <span>Bill Freeman</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/index.html">Home</a>
+        <a href="/experience.html">Experience</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="card page-header" style="text-align: center; padding: 80px 42px;">
+      <h1 class="page-title">404</h1>
+      <p class="page-subtitle">Page not found</p>
+      <p style="margin-top: 24px;">
+        <a href="/index.html" class="button button-secondary">← Back home</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Bill Freeman</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
