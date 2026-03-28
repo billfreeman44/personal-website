@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Bill Freeman</title>
+  <meta name="description" content="Bill Freeman's professional experience — from astrophysics research to gaming startups and enterprise data science." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+    :root {
+      --bg: #08111f;
+      --bg-soft: rgba(255,255,255,0.06);
+      --panel: rgba(8, 17, 31, 0.72);
+      --panel-strong: rgba(9, 14, 25, 0.9);
+      --text: #ecf3ff;
+      --muted: #a6b6d3;
+      --line: rgba(255,255,255,0.12);
+      --accent: #7cc7ff;
+      --accent-2: #b07cff;
+      --glow: 0 0 80px rgba(124, 199, 255, 0.18);
+      --shadow: 0 20px 70px rgba(0,0,0,0.35);
+      --max: 1180px;
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(124,199,255,0.20), transparent 25%),
+        radial-gradient(circle at 85% 15%, rgba(176,124,255,0.16), transparent 24%),
+        radial-gradient(circle at 50% 85%, rgba(65,162,255,0.10), transparent 30%),
+        linear-gradient(180deg, #0a1222 0%, #09111d 45%, #060b14 100%);
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(6, 11, 20, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(124,199,255,0.25), rgba(176,124,255,0.22));
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: var(--glow);
+      font-size: 0.96rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: 180ms ease;
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--text);
+      background: rgba(255,255,255,0.08);
+      outline: none;
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 36px 24px 96px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .page-header {
+      padding: 48px 42px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: "";
+      position: absolute;
+      inset: -30% auto auto 60%;
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(124,199,255,0.18), transparent 65%);
+      pointer-events: none;
+    }
+
+    .page-title {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, #ffffff 0%, #cfe4ff 38%, #92d5ff 70%, #cda7ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .page-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.75;
+      max-width: 62ch;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      transition: color 180ms ease;
+    }
+
+    .back-link:hover { color: var(--text); }
+
+    .experience-list {
+      display: grid;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .experience-entry {
+      padding: 32px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .experience-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 10px 18px;
+      margin-bottom: 14px;
+    }
+
+    .experience-role {
+      margin: 0;
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+    }
+
+    .experience-org {
+      color: var(--accent);
+    }
+
+    .experience-dates {
+      color: var(--muted);
+      font-size: 0.88rem;
+      letter-spacing: 0.02em;
+    }
+
+    .experience-entry p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 72ch;
+    }
+
+    .experience-entry p:last-child { margin-bottom: 0; }
+
+    .section-divider {
+      margin: 40px 0 8px;
+      padding: 0 4px;
+    }
+
+    .section-divider h2 {
+      margin: 0;
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+      letter-spacing: -0.03em;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .education-card {
+      padding: 24px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .education-card h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .education-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .pub-list {
+      margin-top: 28px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .pub-item {
+      padding: 20px 24px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .pub-item em { color: var(--text); font-style: normal; }
+
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px 36px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 720px) {
+      .nav-wrap {
+        min-height: auto;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .page-header {
+        padding: 28px 24px 24px;
+      }
+
+      .experience-entry {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Bill Freeman home">
+        <span class="brand-mark">BF</span>
+        <span>Bill Freeman</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#about">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="index.html">← Back home</a>
+
+    <div class="card page-header">
+      <h1 class="page-title">Experience</h1>
+      <p class="page-subtitle">
+        I’m a data scientist with a background in machine learning, experimentation, product development, and research. Over the course of my career, I’ve worked on problems in pricing, forecasting, search, generative AI, recommender systems, and gaming analytics. Across all of those areas, the common thread has been building practical systems that solve real problems and create measurable value. I like work that sits at the intersection of technical depth and real-world impact, especially when it involves messy data, ambiguous problems, and the chance to turn something complex into something useful.
+      </p>
+    </div>
+
+    <!-- Gaming & Startup -->
+    <div class="section-divider"><h2>Gaming &amp; Startup</h2></div>
+
+    <div class="experience-list">
+      <article class="experience-entry">
+        <div class="experience-meta">
+          <h3 class="experience-role">Co-Founder / Lead Data Scientist — <span class="experience-org">PureSkill.gg</span></h3>
+          <span class="experience-dates">Jan 2020 – Jun 2022</span>
+        </div>
+        <p>
+          At PureSkill.gg, I co-founded and scaled an automated coaching platform for competitive gamers. The goal was to detect player mistakes from gameplay data and direct players toward focused practice that would help them improve. This was one of the most technically creative roles I’ve had because it involved turning noisy, high-volume game telemetry into useful coaching feedback. I built LightGBM models that estimated win probability hundreds of thousands of times per match so we could measure the impact of player decisions in a quantitative way. I also built models to evaluate things like smoke grenade quality and counter-strafing technique using clustering, regression, and other machine learning methods. Just as important, I designed the system that prioritized coaching recommendations based on win impact, frequency, and difficulty, while adjusting for player rank so the advice stayed relevant to the player’s skill level. We processed over a million matches and built a product that served thousands of players, including paying customers. I also worked with human coaches to calibrate the system so the automated feedback matched real player expectations and coaching standards.
+        </p>
+      </article>
+
+      <article class="experience-entry">
+        <div class="experience-meta">
+          <h3 class="experience-role">Research Contributions — <span class="experience-org">PureSkill.gg</span></h3>
+        </div>
+        <p>
+            Alongside the core product work at PureSkill.gg, I also contributed to the broader gaming analytics community. I released public data on AWS and supported it with documentation, tutorials, and open-source software so other researchers could work with it more easily. I also provided modeling advice that contributed to published research on how feature importance in win-rate models differs across skill levels, from professionals to newer players. In another project, I advised a master’s student on how to convert complicated player telemetry into a more understandable vector space using methods like Word2Vec. I liked this part of the work because it combined technical problem solving with teaching, collaboration, and helping other people do better research.
+        </p>
+      </article>
+    </div>
+
+    <!-- Industry -->
+    <div class="section-divider"><h2>Industry</h2></div>
+
+    <div class="experience-list">
+      <article class="experience-entry">
+        <div class="experience-meta">
+          <h3 class="experience-role">Senior Data Scientist, Pricing — <span class="experience-org">Kohl's</span></h3>
+          <span class="experience-dates">Jan 2025 – Present</span>
+        </div>
+        <p>
+          In my current role on the Pricing team at Kohl’s, I lead work on large-scale forecasting and pricing systems. One of the biggest things I’ve owned has been the delivery of a deep learning pricing system built around Temporal Fusion Transformers, which helped support better discounting decisions and drove significant revenue impact. A big part of this role has been bringing structure to a growing team by setting coding standards, creating review processes, and improving how we track experiments so models can move into production more safely and consistently. I also serve as a key business-facing partner for pricing model launches, which means I’m not just building models, but also helping decide when they are ready to go live and how they should be used. On top of that, I’ve mentored junior teammates and helped improve production model accuracy through better feature work and model development practices.
+        </p>
+      </article>
+
+      <article class="experience-entry">
+        <div class="experience-meta">
+          <h3 class="experience-role">Data Scientist, Search &amp; Digital Signs — <span class="experience-org">Kohl's</span></h3>
+          <span class="experience-dates">Jun 2022 – Dec 2024</span>
+        </div>
+        <p>
+            Before joining Pricing, I worked on the Search and Digital Signs teams at Kohl’s. On the search side, I owned personalization modeling and built logistic regression models that drove measurable revenue gains through A/B testing. I also helped move the team toward embedding-based retrieval by building product and query vectors that enabled semantic search across a very large catalog. Beyond modeling, I spent time improving pipeline efficiency by refactoring older Scala workflows into Spark, which made the codebase much smaller and the jobs faster to run. I also built an LLM-powered classifier for customer feedback that reduced incident response time by surfacing important issues much faster. On the digital signs side, I designed and rolled out LLM-generated marketing content at very large scale across hundreds of thousands of in-store signs. That work required more than just prompt writing. I built guardrails, evaluation frameworks, and validation processes, and I partnered closely with Legal and AI Governance to make sure the system could be deployed safely and responsibly.
+        </p>
+      </article>
+
+      <article class="experience-entry">
+        <div class="experience-meta">
+          <h3 class="experience-role">Data Scientist Contractor — <span class="experience-org">RhoImpact</span></h3>
+          <span class="experience-dates">Mar 2019 – Dec 2019</span>
+        </div>
+        <p>
+            At Rho Impact, I worked on NLP and recommendation problems. One of my main projects was building a TF-IDF and logistic regression system that classified a very large volume of medical documents with strong accuracy. I also developed an investor-company recommender based on collaborative filtering. What I liked about this role was the variety. It gave me the chance to work on both text classification and recommendation systems in a practical setting where the models had to be useful, not just technically interesting.
+        </p>
+      </article>
+
+      <article class="experience-entry">
+        <div class="experience-meta">
+          <h3 class="experience-role">Data Scientist Contractor — <span class="experience-org">Lowe's</span></h3>
+          <span class="experience-dates">Aug 2018 – Mar 2019</span>
+        </div>
+        <p>
+            At Lowe's, I worked on retail optimization and data engineering problems. I built a greedy assortment optimization algorithm designed to increase sales while reducing waste, which meant balancing business value with operational constraints. I also built a data pipeline using Hadoop and SQL to estimate stock levels from messy retail data. That experience gave me a strong appreciation for the importance of solid data foundations. A lot of the value in data science comes from modeling, but a lot of it also comes from being able to make sense of incomplete, inconsistent, or hard-to-use data and turn it into something reliable enough to build on.
+        </p>
+      </article>
+    </div>
+
+    <!-- Research -->
+    <div class="section-divider"><h2>Research</h2></div>
+
+    <div class="experience-list">
+      <article class="experience-entry">
+        <div class="experience-meta">
+          <h3 class="experience-role">Researcher — <span class="experience-org">University of California, Riverside</span></h3>
+          <span class="experience-dates">May 2012 – Aug 2017</span>
+        </div>
+        <p>
+            My research background is in physics and astronomy, where I spent several years studying galactic outflows at high redshift. During that time, I published a first-author paper, designed open-source Markov Chain Monte Carlo software for decomposing galactic emission signals, and helped process data from one of the largest surveys ever conducted with the Keck Telescope. I also spent more than 15 nights taking telescope data as part of a careful observing plan and developed software to extract usable information from raw astronomical images. Just as importantly, I trained other team members to use those tools. That period of my career shaped a lot of how I work today. It taught me how to deal with noisy data, how to build reliable analytical tools, how to communicate technical ideas clearly, and how to stay patient with hard problems that take real persistence to solve.
+        </p>
+      </article>
+    </div>
+
+    <!-- Education -->
+    <div class="section-divider"><h2>Education</h2></div>
+
+    <div class="education-grid">
+      <div class="education-card">
+        <h3>PhD Physics</h3>
+        <p>University of California, Riverside</p>
+      </div>
+      <div class="education-card">
+        <h3>MS Physics</h3>
+        <p>University of California, Riverside</p>
+      </div>
+      <div class="education-card">
+        <h3>BS Physics</h3>
+        <p>Louisiana State University</p>
+      </div>
+    </div>
+
+    <!-- Publications -->
+    <div class="section-divider"><h2>Publications</h2></div>
+
+    <div class="pub-list">
+      <div class="pub-item">
+        <em>Analyzing the Differences between Professional and Amateur Esports through Win Probability.</em> Xenopoulos, Freeman, and Silva, 2022.
+      </div>
+      <div class="pub-item">
+        <em>The MOSDEF Survey: Broad Emission Lines at z = 1.4 – 3.8.</em> Freeman et al., 2018.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Bill Freeman</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
