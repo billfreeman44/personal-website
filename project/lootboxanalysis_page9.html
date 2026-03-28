@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summary — Overwatch Loot Box Simulation</title>
+  <meta name="description" content="Part 6: Summary of the Overwatch loot box simulation project." />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Bill Freeman home">
+        <span class="brand-mark">BF</span>
+        <span>Bill Freeman</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../experience.html">Experience</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="overwatch_loot_boxes.html">← Back to table of contents</a>
+
+    <div class="card page-header">
+      <h1 class="page-title">Summary</h1>
+      <p class="page-subtitle">Part 6: Summary of the loot box simulation project (under construction)</p>
+    </div>
+
+    <div class="experience-list">
+      <article class="experience-entry">
+
+        <p>
+          <strong>Loot Boxes are a hot topic in gaming</strong> —
+          These pages are comprehensive analysis of Overwatch loot boxes. Loot boxes are a virtual box that can be opened to give players in-game items. Some gamers believe that loot box systems are simply disguised gambling schemes while others simply enjoy opening their boxes and getting items. Since game developers generally do not disclose information about their loot box systems, we are forced to learn how they work by indirect ways.
+        </p>
+
+        <p>
+          <strong>Loot Boxes can be simulated using random numbers</strong> —
+          One method to learn about loot boxes is monte carlo simulation which uses random numbers to simulate random events. I developed a <a href="lootbox_simulation.html">tool</a> to simulate loot box openings. This tool uses the probability of each drop calculated from opening 1693 loot boxes. The tool simulates opening loot boxes until a final, user-defined set of items is obtained. The tool repeats that process 1000's of times and then calculates the median value. This median is then the typical number of loot boxes a player needs to collect that set of items.
+        </p>
+
+        <p>
+          <strong>Results from the simulations</strong> —
+          Using the tool, one can calculate the median number of loot boxes needed to complete a generic set of items. The most useful statistics are the median, which is the typical loot boxes it will take, and the 90% range, in which 90% of all players will complete the set. To keep things short the median and 90% range will be abbreviated like this (Median: bottom-top). Using the tool, I have shown the following:
+        </p>
+        <ul>
+          <li>For a full set of items it takes (1485: 1066-2142) loot boxes</li>
+          <li>For a full set of items except icons it takes (1042: 967-1120) loot boxes</li>
+          <li>To get a single random icon it takes (186: 15-820) loot boxes</li>
+        </ul>
+
+        <p>
+          <strong>Changes to the loot boxes</strong> —
+          On July 27, 2017, the developers <a href="http://overwatch.wikia.com/wiki/July_27,_2017#Loot_Box_Updates">changed</a> how the loot boxes in Overwatch work. They did two things:
+        </p>
+        <ol>
+          <li>Drastically reduced the number of duplicates that players were getting</li>
+          <li>Increased the frequency of credit drops to compensate for not getting any credits from duplicates</li>
+        </ol>
+        <p>
+          These changes make the loot box simulation tool incorrect. Since players do not get duplicates, the fundamental assumption that loot boxes give random items does not hold.
+        </p>
+
+        <p>
+          <strong>Collecting all items in the new system</strong> —
+          If players get no duplicates from loot boxes, the amount of credits in each loot box is easy to calculate. In the old system, players got between 34 and 87 credits in each loot box. Assuming that Blizzard adjusted the new drop rates to give players 87 credits in each loot box, the new value of each loot box would be <a href="lootboxanalysis_page8.html">320</a> credits. Therefore, the number of loot boxes to open all of the items would just be the total cost of items divided by the value of a loot box.
+        </p>
+        \[235625 / 320.56 = 735\]
+        <p>
+          It takes 735 loot boxes to unlock every normal (non event) item in Overwatch in the current system.
+        </p>
+
+        <p>
+          <strong>Time and money per loot box</strong> —
+          A full set of non-event items takes 735 loot boxes to get. That would cost about $800. By purely leveling up, it would take about 735 hours in game. Players generate XP at different rates, and you can approximate your XP per hour by playing competitive and more <a href="lootboxanalysis_page6interactive.html">here</a>. This doesn't take into account the 3 loot boxes from playing arcade mode.
+        </p>
+
+        <p>
+          <strong>Events</strong> — [under construction]
+        </p>
+
+      </article>
+    </div>
+
+    <div style="display: flex; justify-content: flex-start; margin-top: 32px;">
+      <a href="lootboxanalysis_page8.html" class="button button-secondary">← Previous: New Loot Box System</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Bill Freeman</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
