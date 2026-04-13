@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The MOSDEF Survey: Broad Emission Lines | Bill Freeman</title>
+  <meta name="description" content="A study of broad emission lines in star-forming galaxies at redshifts z = 1.4–3.8 using the MOSDEF survey." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Bill Freeman home">
+        <span class="brand-mark">BF</span>
+        <span>Bill Freeman</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../experience.html">Experience</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="../projects.html">← Back to projects</a>
+
+    <div class="card page-header">
+      <h1 class="page-title">The MOSDEF Survey: Broad Emission Lines at z&nbsp;=&nbsp;1.4&nbsp;–&nbsp;3.8</h1>
+      <p class="page-subtitle">Freeman et al. 2019. A study of broadened nebular emission in star-forming galaxies during the peak epoch of cosmic star formation.</p>
+    </div>
+
+    <div class="experience-list">
+
+      <!-- INTRODUCTION -->
+      <article class="experience-entry">
+        <h3 class="experience-role">Introduction</h3>
+
+        <p>
+          This page describes a research paper I wrote as a graduate student at UC Riverside, based on data from the MOSFIRE Deep Evolution Field (MOSDEF) survey. The paper was published in 2019 and focuses on a specific feature of galaxy spectra, broad emission lines, in a large sample of galaxies observed when the universe was roughly 2–5 billion years old, compared to its current age of about 14 billion years.
+        </p>
+
+        <p>
+          When astronomers observe a galaxy, one of the most useful measurements they can make is a spectrum: a record of how much light the galaxy emits at each wavelength. Within spectra, sharp peaks of emission at specific wavelengths, called emission lines, act as fingerprints of the gas in and around the galaxy. These lines encode information about how fast stars are forming, how dense the gas is, what it is made of, and whether the galaxy hosts an active black hole.
+        </p>
+
+        <p>
+          In many galaxies, these emission lines appear wider than expected. They are broader in wavelength than can be explained by the motion of gas within the galaxy alone. This broadening suggests that some fraction of the gas is moving very fast, possibly being driven out of the galaxy entirely in what is called a galactic outflow. Understanding how common these outflows are, how much gas they carry, and what drives them are central questions in galaxy formation research.
+        </p>
+
+        <p>
+          In some previous work, broad emission had been studied in small samples, or in galaxies specifically selected for having extreme properties like very high star formation rates or confirmed active black holes. The goal of this work is to measure broad emission in a large, representative sample of typical star-forming galaxies at $z \sim 1{–}3$, where $z$ is the cosmological redshift, a measure of how far away (and therefore how far back in time) the galaxies are.
+        </p>
+      </article>
+
+      <!-- BACKGROUND -->
+      <article class="experience-entry">
+        <h3 class="experience-role">Background</h3>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Emission lines and what they tell us</h4>
+        <p>
+          Atoms emit light at specific wavelengths when electrons transition between energy levels. In galaxies, hot young stars produce ultraviolet radiation that ionizes the surrounding gas; as the gas recombines and its electrons return to lower energy states, it emits light at characteristic wavelengths. The resulting bright peaks in a spectrum are the emission lines. Commonly studied lines include H$\alpha$ (hydrogen), [N II] (ionized nitrogen), [O III] (doubly ionized oxygen), H$\beta$ (hydrogen), and [S II] (ionized sulfur). The relative strengths of these lines are sensitive to physical conditions in the gas: temperature, density, the hardness of the ionizing radiation, and metallicity (the abundance of elements heavier than hydrogen and helium).
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Redshift and cosmic time</h4>
+        <p>
+          As the universe expands, light from distant galaxies is stretched to longer wavelengths, a phenomenon known as cosmological redshift, denoted $z$. A galaxy at $z = 2$ is seen as it was roughly 10 billion years ago. Because light takes time to travel, observing high-redshift galaxies is equivalent to looking back in time. Galaxies at $z \sim 1{–}3$ are observed during the period sometimes called "cosmic noon," when the overall rate of star formation across the universe was at its peak.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Emission line diagnostic diagrams</h4>
+        <p>
+          Astronomers use plots of emission line ratios to diagnose physical conditions in galaxies. One of the most widely used is the BPT diagram, which plots the ratio [O III]/H$\beta$ on the vertical axis against [N II]/H$\alpha$ on the horizontal axis. In this diagram, galaxies group into distinct regions depending on whether their gas is ionized primarily by star formation or by an active galactic nucleus (AGN), a supermassive black hole accreting material at the center of the galaxy. Galaxies at $z \sim 2$ are systematically shifted relative to $z \sim 0$ galaxies in this diagram, and explaining that offset is an active area of research.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Galactic outflows and broad emission</h4>
+        <p>
+          Galaxies can drive gas outward through the combined energy of many supernovae and stellar winds, a process called a stellar-feedback-driven outflow. When gas is expelled at high velocity, its emission lines are Doppler-broadened: the line profile in the spectrum is wider than it would be if all the gas were moving at similar speeds. In practice, observers decompose the emission line profile into (at least) two components: a narrow component from gas in the normal star-forming regions of the galaxy, and a broad component from gas moving at higher velocities. The broad component is a useful tracer of outflowing material. The ratio of broad flux to narrow flux is called the broad flux ratio (BFR).
+        </p>
+      </article>
+
+      <!-- OBSERVATIONS & SAMPLE -->
+      <article class="experience-entry">
+        <h3 class="experience-role">Observations and Sample</h3>
+
+        <p>
+          The data come from the first two years of the MOSDEF survey, which collected near-infrared spectra for approximately 1,500 high-redshift galaxies using the MOSFIRE spectrograph on the W. M. Keck telescope in Hawaii. Spectra were obtained over 48.5 nights from 2012 to 2016. Because H$\alpha$ and [O III] are emitted in the rest-frame optical but are observed at near-infrared wavelengths for high-redshift sources, MOSFIRE's wavelength coverage is well-suited to these measurements.
+        </p>
+
+        <p>
+          The galaxies in this study are distributed across three redshift bins: $1.37 < z < 1.70$, $2.09 < z < 2.61$, and $2.95 < z < 3.80$. We combined the first two bins into a single $z \sim 2$ sample because both have coverage of H$\alpha$ and [O III], and stacking galaxies across both windows improves our ability to detect faint broad emission. The $z \sim 3$ sample was analyzed separately using [O III] only, since H$\alpha$ falls outside the observable wavelength range at those redshifts.
+        </p>
+
+        <p>
+          To build a clean sample, we removed galaxies where accurate measurement of the broad component would be unreliable. Galaxies were excluded if they hosted a known AGN (identified through X-ray, infrared, or optical diagnostics), if they appeared to be undergoing a merger, if the relevant emission lines landed on bright sky emission lines, if the lines fell near the edge of the wavelength coverage, or if the total signal-to-noise ratio (S/N) of the key lines was below 10. We also removed galaxies where the single-Gaussian line width exceeded 275 km s$^{-1}$, since these would likely produce false detections of the broad component. After this cleaning, the final sample contains 216 unique galaxies: 203 with [O III] measurements, 138 with H$\alpha$ measurements, and 125 with both.
+        </p>
+
+        <p>
+          Physical properties, including stellar mass, star formation rate (SFR), and age, were derived by comparing the galaxies' broadband spectral energy distributions to stellar population synthesis models using the FAST fitting code. When available, SFRs were calculated directly from H$\alpha$ luminosity, corrected for dust extinction using the Balmer decrement.
+        </p>
+      </article>
+
+      <!-- MEASURING THE BROAD COMPONENT -->
+      <article class="experience-entry">
+        <h3 class="experience-role">Measuring the Broad Component</h3>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Fitting individual galaxies</h4>
+        <p>
+          We model the emission lines of each galaxy as the sum of two Gaussian components: a narrow component representing emission from the galaxy's star-forming regions, and a broad component representing the high-velocity gas we are trying to measure. Each set of related emission lines (e.g., H$\alpha$ and [N II], or [O III] and H$\beta$) is fit simultaneously, with the width and velocity offset of each component constrained to be the same across all lines in the set.
+        </p>
+
+        <p>
+          To be physically meaningful, the fitting procedure imposes bounds on the component widths. The narrow component is restricted to a full width at half maximum (FWHM) between the width of sky emission lines in that spectral region and 275 km s$^{-1}$. The broad component is restricted to FWHM between 300 and 850 km s$^{-1}$. The lower limit ensures the broad component is kinematically distinct from the narrow one; the upper limit corresponds to the typical maximum outflow speed inferred from rest-frame UV absorption lines in $z \sim 2$ galaxies. The centroid of the broad component is allowed to shift by up to $\pm$100 km s$^{-1}$ relative to the narrow component. Final parameter estimates and uncertainties are obtained using a Markov Chain Monte Carlo (MCMC) algorithm.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Stacking</h4>
+        <p>
+          For most individual galaxies the S/N is insufficient to robustly detect the faint, high-velocity wings of the broad emission. To increase sensitivity, we create stacks, which are co-added spectra of galaxies grouped in bins of stellar mass with each bin containing approximately the same number of galaxies. Before stacking, spectra are shifted to a common rest-frame wavelength grid, normalized by the total emission-line luminosity of either H$\alpha$ or [O III], and summed without weighting. The stacked spectra are then fit with the same narrow+broad procedure described above.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Validation</h4>
+        <p>
+          Before interpreting measurements, we tested whether the fitting procedure could produce spurious broad detections (false positives) even in spectra with no true broad emission. We simulated 200 single-Gaussian emission lines at various widths and noise levels, ran the same fitting algorithm, and found false-positive rates of 11%, 1%, and 0.05% at 1$\sigma$, 2$\sigma$, and 3$\sigma$ respectively, consistent with or slightly below the rates expected from Gaussian statistics. We also verified that the process of stacking spectra does not introduce a broad component, even when individual spectra have slightly imperfect redshift estimates.
+        </p>
+      </article>
+
+      <!-- RESULTS -->
+      <article class="experience-entry">
+        <h3 class="experience-role">Results</h3>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Broad flux detections</h4>
+        <p>
+          Across individual galaxies, 10 out of 138 H$\alpha$ measurements (7%) and 21 out of 201 [O III] measurements (10%) show a broad component significant at the $>3\sigma$ level. Where detected, the broad flux accounts for 10–70% of the total line flux. In the mass-binned stacks, the broad component is detected in all bins at $>3\sigma$ significance for both H$\alpha$ and [O III], indicating that broad emission is a common albeit faint feature of these galaxies.
+        </p>
+
+        <p>
+          The stacks show a possible increase in BFR with stellar mass, though this trend is difficult to interpret at low masses. For galaxies below $\sim 10^{10}\ M_\odot$, outflow velocities may be low enough that the broad emission falls below the 275 km s$^{-1}$ threshold distinguishable from the narrow component, leading to systematic underestimation of the BFR at low masses.
+        </p>
+
+        <p>
+          There is a strong dependence of the broad component detection rate on S/N: 66% of H$\alpha$ detections with S/N $>$ 70 show a broad component, compared to only 1.6% for S/N $<$ 70. For [O III], the corresponding numbers are 32% above S/N $=$ 45 and 5% below. This dependence implies that the overall 10% detection rate is a lower limit; with deeper data, more detections would likely be made.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Emission line ratios of the broad and narrow components</h4>
+        <p>
+          By fitting both components simultaneously in the stacked spectra, we can compute the emission line ratios [N II]/H$\alpha$, [S II]/H$\alpha$, and [O III]/H$\beta$ separately for the narrow and broad components and place each on the BPT diagram. The narrow component ratios fall closer to the local ($z \sim 0$) galaxy sequence than the bulk MOSDEF sample ratios, which is expected because our S/N $>$ 10 requirement preferentially excluded lower-mass galaxies that tend to be more offset from the local relation. The broad components, however, lie at higher [N II]/H$\alpha$ and [O III]/H$\beta$ ratios, placing them in the composite star-forming/AGN region of the BPT diagram. This shift is also seen in a non-parametric analysis of line ratios as a function of velocity, which confirms the trend without any assumption about the shape of the broad component.
+        </p>
+      </article>
+
+      <!-- DISCUSSION -->
+      <article class="experience-entry">
+        <h3 class="experience-role">Discussion</h3>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Shocks</h4>
+        <p>
+          One physical explanation for the elevated line ratios in the broad component is shocks. When gas driven outward by supernovae collides with surrounding interstellar material, the resulting shock-heated gas produces emission line ratios that are systematically different from those in photoionized HII regions, with notably higher [N II]/H$\alpha$ and [S II]/H$\alpha$ ratios. We compare the broad component line ratios to a grid of shock+precursor models spanning a range of shock velocities (200–500 km s$^{-1}$), metallicities, and electron densities.
+        </p>
+
+        <p>
+          The models that best match the physical properties of the MOSDEF sample (metallicity $\log(\text{O/H}) + 12 \approx 8.44$, electron density $n_e \approx 1\ \text{cm}^{-3}$, shock velocity $\sim$300 km s$^{-1}$) are consistent with the observed broad component ratios in the N2-BPT diagram, suggesting that shocks are a viable explanation. The S2-BPT diagram is more ambiguous, partly because the [S II] line flux in the broad component is too low for a robust constraint.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">AGN</h4>
+        <p>
+          Although known AGN were removed from the sample, low-luminosity active black holes that fall below the thresholds used for AGN identification could still contribute. AGN tend to produce harder ionizing radiation, which drives [N II]/H$\alpha$ and [O III]/H$\beta$ to higher values, consistent with the line ratios we observe in the broad component. However, AGN-driven outflows are typically faster (500–5,000 km s$^{-1}$) and show larger velocity offsets between the broad and narrow components (100–500 km s$^{-1}$) than what we measure, making it unlikely that AGN are the primary driver. Given that star formation rates are considerably higher at $z \sim 2$ than locally, weak AGN would also be outshone by star formation activity. We cannot rule out some contribution from low-luminosity AGN, but it is likely small.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Outflows and the mass loading factor</h4>
+        <p>
+          Interpreting the broad component as a photoionized outflow, we estimate the mass loading factor $\eta$, defined as the ratio of the mass outflow rate to the star formation rate, for each stack. The mass outflow rate is calculated using a model that assumes a spherically symmetric outflow at constant velocity:
+        </p>
+
+        <p style="text-align: center; margin: 24px 0;">
+          $$\dot{M}_\text{out} = \frac{1.36\, m_H}{\gamma_{H\alpha}\, n_e} \left( L_{H\alpha} \frac{F_\text{broad}}{F_\text{narrow}} \right) \frac{V_\text{out}}{R_\text{out}}$$
+        </p>
+
+        <p>
+          where $m_H$ is the mass of a hydrogen atom, $\gamma_{H\alpha}$ is the H$\alpha$ emissivity, $n_e$ is the electron density, $L_{H\alpha}$ is the total extinction-corrected H$\alpha$ luminosity, $F_\text{broad}/F_\text{narrow}$ is the BFR, $V_\text{out}$ is the outflow velocity, and $R_\text{out}$ is the outflow radius. Several parameters, specifically electron density and outflow radius, could not be directly measured from this dataset and were adopted from a similar study of 27 star-forming galaxies at $z \sim 2$. Dividing by the SFR and substituting fiducial values, this simplifies to:
+        </p>
+
+        <p style="text-align: center; margin: 24px 0;">
+          $$\eta \approx 2.0 \left(\frac{50\ \text{cm}^{-3}}{n_e}\right) \left(\frac{V_\text{out}}{300\ \text{km s}^{-1}}\right) \left(\frac{3\ \text{kpc}}{R_\text{out}}\right) \left(\frac{F_\text{broad}}{F_\text{narrow}}\right)$$
+        </p>
+
+        <p>
+          The resulting values of $\eta$ for the $z \sim 2$ stacks are generally consistent with previous measurements at this redshift. The mass loading factor appears to increase with stellar mass in our data, which is contrary to the prediction from the FIRE cosmological simulations, where $\eta$ decreases with mass. We attribute this discrepancy largely to the observational bias against detecting low-velocity outflows: if galaxies at lower stellar mass drive slower outflows (as predicted by FIRE), those outflows may have FWHM $< 275$ km s$^{-1}$ and would be indistinguishable from the narrow component in our data. Simulated tests confirm this: when input galaxies have low-velocity broad components, the stacking analysis underestimates the BFR at low masses and produces an apparent increase in BFR with mass even when the input has the opposite trend.
+        </p>
+
+        <p>
+          Even at the high-mass end, the measured $\eta$ falls somewhat below the FIRE prediction ($\eta = 1.4$ vs. 2.6 at $\log M_* \approx 10.3$). A plausible explanation is that outflows are multi-phase: the H$\alpha$ emission traces only the ionized gas, while a neutral component that may carry 9–14 times more mass would not be captured in this measurement.
+        </p>
+      </article>
+
+      <!-- IMPLICATIONS -->
+      <article class="experience-entry">
+        <h3 class="experience-role">Implications for Emission Line Diagnostics</h3>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Can shocks explain the z ~ 0 to z ~ 2 offset?</h4>
+        <p>
+          A long-standing puzzle in galaxy evolution is that $z \sim 2$ galaxies are offset from $z \sim 0$ galaxies in several emission line diagnostic diagrams that include [N II]. We investigated whether the addition of shocked emission to local galaxy spectra could reproduce this offset. Using the best-matched shock models for the MOSDEF sample properties and assuming a BFR of 0.4 (corresponding to roughly 29% of the total flux originating in shocked gas, which is the average BFR across the stacks), we added the shocked emission to SDSS spectra of local galaxies and recomputed their line ratios.
+        </p>
+
+        <p>
+          The SDSS+shock models shift in the same direction as, and are broadly consistent with, the observed $z \sim 2$ data in the N2-BPT diagram, the O32 vs. O3N2 diagram, and the O32 vs. N2 diagram. Importantly, the models do not predict an offset in the O32 vs. R23 diagram, which is also not observed at $z \sim 2$. This does not prove the offset is caused by shocks; other explanations (higher ionization parameters, elevated N/O ratios, harder ionizing radiation) remain viable, but it demonstrates that shocks are a plausible and internally consistent explanation.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">The S2-BPT diagram</h4>
+        <p>
+          In contrast to the N2-BPT, there is no observed offset between local and $z \sim 2$ galaxies in the S2-BPT diagram ([O III]/H$\beta$ vs. [S II]/H$\alpha$). This could be explained by two competing effects at these redshifts. First, the shocked [S II]/H$\alpha$ ratio is strongly dependent on electron density, and at the electron densities typical of $z \sim 2$ galaxies, the shocked and photoionized values may be similar enough that adding shocked emission produces little net shift. Second, $z \sim 2$ galaxies have higher star formation surface densities and are therefore expected to have less contribution from diffuse ionized gas, which would lower their intrinsic [S II]/H$\alpha$ ratio and approximately cancel out any increase from shocked emission.
+        </p>
+
+        <h4 style="color: var(--muted); margin: 20px 0 8px; font-size: 1rem; font-weight: 600;">Effects on star formation rate estimates</h4>
+        <p>
+          If some fraction of the H$\alpha$ flux originates in shocks rather than in photoionized HII regions, then using the total H$\alpha$ luminosity to estimate the SFR will overpredict the true star formation rate. Based on the BFRs measured in our stacks, SFRs would be overpredicted by approximately 15%, 40%, and 68% in the low, medium, and high stellar mass bins, respectively. These systematic offsets are not negligible, though given the substantial uncertainties already present in SFR measurements (dust extinction corrections, assumed initial mass function, star formation history), they may be difficult to identify in practice.
+        </p>
+      </article>
+
+      <!-- CONCLUSION -->
+      <article class="experience-entry">
+        <h3 class="experience-role">Conclusion</h3>
+
+        <p>
+          We present measurements of broad emission in nebular lines (H$\alpha$, [N II], [O III], H$\beta$, [S II]) for a sample of 216 star-forming galaxies at $1.37 < z < 3.80$ from the MOSDEF survey. The key findings are:
+        </p>
+
+        <ul style="margin: 0 0 14px; padding-left: 1.4em; color: var(--muted); line-height: 1.9;">
+          <li>Broad emission is detected at $>3\sigma$ in fewer than 10% of individual galaxies, but in all mass-binned stacks. Where detected, the broad flux accounts for 10–70% of the total emission-line flux.</li>
+          <li>There is a strong correlation between detection of the broad component and S/N, indicating that the 10% detection rate is a lower limit.</li>
+          <li>The broad components in the stacks have higher [N II]/H$\alpha$ and [O III]/H$\beta$ ratios than the corresponding narrow components, placing them in the composite star-forming/AGN region of the BPT diagram. These ratios are consistent with shocked emission at the metallicities and densities typical of the sample.</li>
+          <li>Estimates of the mass loading factor $\eta$ are broadly consistent with previous measurements at this redshift. The apparent increase of $\eta$ with stellar mass in our data is most likely an artifact of our inability to detect low-velocity broad emission at low masses.</li>
+          <li>Adding shocked emission with BFR $= 0.4$ to local SDSS spectra shifts galaxies in several emission line diagnostic diagrams toward the positions of $z \sim 2$ galaxies, consistent with shocks as a contributing explanation for the observed evolution in line ratios. The same argument applies to low-luminosity AGN, which produce similar line ratios.</li>
+        </ul>
+
+        <p>
+          Future studies would benefit from improved spatial information. High-resolution integral field unit observations aided by adaptive optics could separate the spatial distribution of the broad and narrow emission, helping to distinguish AGN-driven from star-formation-driven outflows and to measure the geometry of the outflow more directly.
+        </p>
+
+        <p>
+          The full paper is available on arXiv: <a href="https://arxiv.org/abs/1710.03230" style="color: var(--accent);" target="_blank" rel="noreferrer noopener">arXiv:1710.03230</a>.
+        </p>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Bill Freeman</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
