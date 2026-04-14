@@ -61,6 +61,11 @@ a:visited { color: inherit; }
   gap: 14px;
   font-weight: 700;
   letter-spacing: 0.03em;
+  transition: opacity 180ms ease;
+}
+
+.brand:hover {
+  opacity: 0.75;
 }
 
 .brand-mark {
@@ -524,11 +529,11 @@ h1 {
 .experience-entry p:last-child { margin-bottom: 0; }
 
 .experience-entry p a,
-.pub-item a {
+.experience-entry p a:visited {
   color: var(--accent);
 }
-.experience-entry p a:hover,
-.pub-item a:hover {
+.experience-entry p a:hover {
+  color: #e05060;
   text-decoration: underline;
 }
 
@@ -556,6 +561,12 @@ h1 {
   border-radius: 20px;
   background: rgba(255,255,255,0.035);
   border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.education-card:hover {
+  border-color: var(--accent);
+  background: rgba(192,64,78,0.08);
 }
 
 .education-card h3 {
@@ -570,6 +581,11 @@ h1 {
   line-height: 1.6;
 }
 
+.education-card p a,
+.education-card p a:visited {
+  color: var(--muted);
+}
+
 /* ── Publications ──────────────────────────────────────────── */
 .pub-list {
   margin-top: 28px;
@@ -578,12 +594,18 @@ h1 {
 }
 
 .pub-item {
+  display: block;
   padding: 20px 24px;
   border-radius: 18px;
   background: rgba(255,255,255,0.035);
   border: 1px solid rgba(255,255,255,0.08);
   color: var(--muted);
   line-height: 1.65;
+  transition: border-color 0.15s, background 0.15s;
+}
+.pub-item:hover {
+  border-color: var(--accent);
+  background: rgba(192,64,78,0.08);
 }
 
 .pub-item em { color: var(--text); font-style: normal; }
