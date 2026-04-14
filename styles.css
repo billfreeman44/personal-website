@@ -31,6 +31,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+a:visited { color: inherit; }
 
 /* ── Header & Navigation ──────────────────────────────────── */
 .site-header {
@@ -245,9 +246,18 @@ h1 {
   box-shadow: var(--glow);
 }
 
+.button-primary:hover {
+  background: linear-gradient(135deg, rgba(175,40,60,0.55), rgba(135,20,40,0.50));
+}
+
 .button-secondary {
   background: rgba(255,255,255,0.04);
   color: var(--text);
+}
+
+.button-secondary:hover {
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.22);
 }
 
 /* ── Stats Panel (index) ──────────────────────────────────── */
@@ -358,8 +368,13 @@ h1 {
 
 .project-link {
   margin-top: 20px;
+  color: var(--muted);
+  transition: color 180ms ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
   color: var(--text);
-  opacity: 0.92;
 }
 
 .project-links {
@@ -370,8 +385,13 @@ h1 {
 }
 
 .project-links a {
+  color: var(--muted);
+  transition: color 180ms ease;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
   color: var(--text);
-  opacity: 0.92;
 }
 
 /* ── About & Info Cards ────────────────────────────────────── */
@@ -462,9 +482,11 @@ h1 {
 
 .experience-entry a:not(.button) {
   color: var(--accent);
+  transition: color 180ms ease;
 }
 
 .experience-entry a:not(.button):hover {
+  color: #e07585;
   text-decoration: underline;
 }
 
