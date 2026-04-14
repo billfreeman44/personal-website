@@ -523,6 +523,15 @@ h1 {
 
 .experience-entry p:last-child { margin-bottom: 0; }
 
+.experience-entry p a,
+.pub-item a {
+  color: var(--accent);
+}
+.experience-entry p a:hover,
+.pub-item a:hover {
+  text-decoration: underline;
+}
+
 .section-divider {
   margin: 40px 0 8px;
   padding: 0 4px;
