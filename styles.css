@@ -1,16 +1,16 @@
 /* ── Custom Properties ──────────────────────────────────────── */
 :root {
-  --bg: #120608;
-  --bg-soft: rgba(255,255,255,0.06);
-  --panel: rgba(18, 6, 8, 0.72);
-  --panel-strong: rgba(15, 5, 7, 0.9);
+  --bg: #0c0f15;
+  --bg-soft: rgba(255,255,255,0.05);
+  --panel: rgba(12,15,22,0.78);
+  --panel-strong: rgba(9,12,18,0.92);
   --text: #ffffff;
-  --muted: #c8bec4;
-  --line: rgba(255,255,255,0.14);
-  --accent: #c0404e;
-  --accent-2: #8b1a2a;
-  --glow: 0 0 80px rgba(140, 20, 40, 0.30);
-  --shadow: 0 20px 70px rgba(0,0,0,0.35);
+  --muted: #8a9dba;
+  --line: rgba(255,255,255,0.10);
+  --accent: #adceff;
+  --accent-2: #6e9fde;
+  --glow: 0 0 80px rgba(100,160,255,0.16);
+  --shadow: 0 20px 70px rgba(0,0,0,0.45);
   --max: 1180px;
   --radius: 22px;
 }
@@ -20,18 +20,26 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 15% 20%, rgba(180,40,60,0.22), transparent 25%),
-    radial-gradient(circle at 85% 15%, rgba(140,20,40,0.18), transparent 24%),
-    radial-gradient(circle at 50% 85%, rgba(160,30,50,0.12), transparent 30%),
-    linear-gradient(180deg, #1a0508 0%, #130406 45%, #0d0304 100%);
+    radial-gradient(circle at 15% 20%, rgba(60,100,200,0.11), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(40,80,180,0.08), transparent 26%),
+    radial-gradient(circle at 50% 85%, rgba(50,90,190,0.06), transparent 30%),
+    linear-gradient(180deg, #0f1219 0%, #0c0f15 45%, #090c12 100%);
   min-height: 100vh;
 }
 
 a { color: inherit; text-decoration: none; }
 a:visited { color: inherit; }
+
+/* ── Stacking: keep real content above the bg animation SVG ── */
+.site-header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
 
 /* ── Header & Navigation ──────────────────────────────────── */
 .site-header {
@@ -40,7 +48,7 @@ a:visited { color: inherit; }
   z-index: 1000;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  background: rgba(12, 4, 6, 0.72);
+  background: rgba(10,12,18,0.80);
   border-bottom: 1px solid var(--line);
 }
 
@@ -74,8 +82,8 @@ a:visited { color: inherit; }
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(140,20,40,0.35), rgba(100,10,25,0.32));
-  border: 1px solid rgba(255,255,255,0.14);
+  background: linear-gradient(135deg, rgba(60,100,200,0.28), rgba(40,80,180,0.22));
+  border: 1px solid rgba(173,206,255,0.18);
   box-shadow: var(--glow);
   font-size: 0.96rem;
 }
@@ -129,7 +137,7 @@ main {
   inset: -30% auto auto 60%;
   width: 340px;
   height: 340px;
-  background: radial-gradient(circle, rgba(180,40,60,0.20), transparent 65%);
+  background: radial-gradient(circle, rgba(60,100,200,0.14), transparent 65%);
   pointer-events: none;
 }
 
@@ -181,7 +189,7 @@ main {
   inset: -30% auto auto 60%;
   width: 340px;
   height: 340px;
-  background: radial-gradient(circle, rgba(180,40,60,0.20), transparent 65%);
+  background: radial-gradient(circle, rgba(60,100,200,0.14), transparent 65%);
   pointer-events: none;
 }
 
@@ -208,7 +216,7 @@ h1 {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #ffd0d8 38%, #e87080 70%, #d05060 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #d0e4ff 38%, #adceff 70%, #7eadf5 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -247,12 +255,12 @@ h1 {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, rgba(140,20,40,0.32), rgba(100,10,25,0.32));
+  background: linear-gradient(135deg, rgba(60,100,210,0.28), rgba(40,80,180,0.24));
   box-shadow: var(--glow);
 }
 
 .button-primary:hover {
-  background: linear-gradient(135deg, rgba(175,40,60,0.55), rgba(135,20,40,0.50));
+  background: linear-gradient(135deg, rgba(80,130,240,0.48), rgba(60,110,220,0.42));
 }
 
 .button-secondary {
@@ -282,7 +290,7 @@ h1 {
 .stat {
   padding: 18px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.04);
+  background: rgba(10,14,22,0.74);
   border: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -338,7 +346,7 @@ h1 {
 .project-card {
   padding: 28px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.035);
+  background: rgba(10,14,22,0.74);
   border: 1px solid rgba(255,255,255,0.08);
   min-height: 220px;
   display: flex;
@@ -409,7 +417,7 @@ h1 {
 .info-card {
   padding: 24px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.035);
+  background: rgba(10,14,22,0.74);
   border: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -449,7 +457,7 @@ h1 {
 .contact-link {
   padding: 18px 20px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.04);
+  background: rgba(10,14,22,0.74);
   border: 1px solid rgba(255,255,255,0.08);
   display: flex;
   justify-content: space-between;
@@ -458,8 +466,8 @@ h1 {
 }
 
 .contact-link:hover {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.14);
+  background: rgba(14,20,34,0.86);
+  border-color: rgba(173,206,255,0.22);
 }
 
 .contact-label {
@@ -481,7 +489,7 @@ h1 {
 .experience-entry {
   padding: 32px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.035);
+  background: rgba(10,14,22,0.74);
   border: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -491,7 +499,7 @@ h1 {
 }
 
 .experience-entry a:not(.button):hover {
-  color: #e07585;
+  color: #c8dcff;
   text-decoration: underline;
 }
 
@@ -533,7 +541,7 @@ h1 {
   color: var(--accent);
 }
 .experience-entry p a:hover {
-  color: #e05060;
+  color: #c8dcff;
   text-decoration: underline;
 }
 
@@ -559,14 +567,14 @@ h1 {
 .education-card {
   padding: 24px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.035);
+  background: rgba(10,14,22,0.74);
   border: 1px solid rgba(255,255,255,0.08);
   transition: border-color 0.15s, background 0.15s;
 }
 
 .education-card:hover {
   border-color: var(--accent);
-  background: rgba(192,64,78,0.08);
+  background: rgba(12,20,38,0.88);
 }
 
 .education-card h3 {
@@ -597,7 +605,7 @@ h1 {
   display: block;
   padding: 20px 24px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.035);
+  background: rgba(10,14,22,0.74);
   border: 1px solid rgba(255,255,255,0.08);
   color: var(--muted);
   line-height: 1.65;
@@ -605,7 +613,7 @@ h1 {
 }
 .pub-item:hover {
   border-color: var(--accent);
-  background: rgba(192,64,78,0.08);
+  background: rgba(12,20,38,0.88);
 }
 
 .pub-item em { color: var(--text); font-style: normal; }
